@@ -22,24 +22,34 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center; /* 中央寄せ */
   }
   
   nav li {
-    display: inline;
-    margin: 0 10px;
+    display: block; /* 縦に並べる */
+    margin: 10px 0; /* 上下の余白 */
   }
   
   nav a {
     text-decoration: none;
     color: #333;
-    padding: 5px 10px;
+    padding: 10px 20px; /* パディングを大きくする */
     border-radius: 5px;
+    display: flex; /* アイコンとテキストを横に並べる */
+    align-items: center; /* アイコンとテキストを中央揃え */
+    justify-content: center; /* リンク全体を中央寄せ */
+    border: 1px solid #ccc; /* 枠線を追加 */
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
   }
   
   nav a:hover {
     background-color: #333;
     color: #fff;
+    border-color: #333; /* ホバー時に枠線の色も変更 */
+  }
+  
+  nav a i {
+    margin-right: 10px; /* アイコンとテキストの間の余白 */
   }
   
   main {
